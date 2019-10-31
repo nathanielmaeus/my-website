@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   top: 0;
   width: 100%;
   height: 60px;
-  padding: 4px 64px;
+  padding: 8px 64px;
   box-sizing: border-box;
   background: white;
   box-shadow: 1px 2px 18px rgba(0, 0, 0, 0.1);
