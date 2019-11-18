@@ -5,11 +5,9 @@ import { Wrapper, List, ListItem } from './styles';
 export function Header() {
   return (
     <Wrapper>
-      <h2>Slava Ermakov</h2>
-      <List type="none">
-        <ListItem>Portfolio</ListItem>
-        <ListItem>Contact</ListItem>
-      </List>
+      <h5>slavaskainet@gmail.com</h5>
+      <h5>Slava Ermakov</h5>
+      <h5>What?</h5>
     </Wrapper>
   );
 }

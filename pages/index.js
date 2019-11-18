@@ -9,6 +9,7 @@ const Home = () => (
     <Head>
       <title>Home</title>
       <link rel="icon" href="/favicon.ico" />
+      <link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet" />
     </Head>
     <Header />
     <Main />
@@ -16,6 +17,9 @@ const Home = () => (
       html, body {
         margin: 0;
         padding: 0;
+        background-color: #fff;
+        color: #000;
+        font-family: 'Tomorrow', 'Roboto', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       }
     `}</style>
   </>
