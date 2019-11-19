@@ -17,9 +17,10 @@ const Home = () => (
       html, body {
         margin: 0;
         padding: 0;
-        background-color: #fff;
-        color: #000;
-        font-family: 'Tomorrow', 'Roboto', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        background-color: #000;
+        color: #fff;
+        font-family: 'Roboto', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 16px;
       }
     `}</style>
   </>

@@ -2,7 +2,7 @@ import * as React from "react";
 
 export const IconAvatar = ({ w, h, className }) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.003 512.003" height="512px" width="512px">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.003 512.003" className={className}>
       <path
         fill="#e6af78"
         d="M335.446 361.939V300.15H176.558v61.789l79.444 70.617z"

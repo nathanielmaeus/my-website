@@ -1,5 +1,7 @@
 const withCSS = require('@zeit/next-css')
-module.exports = withCSS({
+const withImages = require('next-images')
+ 
+module.exports = withImages(withCSS({
   cssModules: true,
   cssLoaderOptions: {
     importLoaders: 1,
@@ -9,4 +11,4 @@ module.exports = withCSS({
     maxInactiveAge: 25 * 10000,
     pagesBufferLength: 2,
   },
-})
+}))
