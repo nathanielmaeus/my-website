@@ -1,7 +1,8 @@
 import React from "react";
 import Head from "next/head";
 import Header from "../components/header";
-import Main from "../components/main";
+import Portfolio from "../components/portfolio";
+
 
 const Home = () => (
   <>
@@ -18,7 +19,7 @@ const Home = () => (
       ></link>
     </Head>
     <Header />
-    <Main />
+    <div>WIP</div>
     <style jsx global>{`
       body {
         margin: 0 8%;

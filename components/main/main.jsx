@@ -1,7 +1,8 @@
 import React from "react";
-import { Wrapper, Layout, LayoutItem, LogoImg, LogoName } from "./styles";
+import { Wrapper, Layout, LayoutItem } from "./styles";
 import IconAvatar from "../icons/avatar";
 import Description from "../description";
+import Portfolio from "../portfolio";
 
 export function Main() {
   return (
@@ -14,11 +15,18 @@ export function Main() {
           have a high level of responsibility.
         </LayoutItem>
         <LayoutItem>
-          <LogoImg src={require("./me1.jpg")} alt="that's me" />
-          <LogoName>Slava Ermakov</LogoName>
+          <div className="main-info">
+            <img className="logo" src={require("./me1.jpg")} alt="that's me" />
+            <div className="name">Slava Ermakov</div>
+          </div>
+          <div className="desc">
+            <p className="row">Middle Frontend Developer</p>
+            <p className="row">22 y.o</p>
+          </div>
         </LayoutItem>
       </Layout>
       <Description />
+      <Portfolio />
     </Wrapper>
   );
 }

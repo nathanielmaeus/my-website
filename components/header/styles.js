@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   top: 0;
   width: 100%;
   height: 60px;
-  padding: 4px 64px;
+  margin: 8px 8px;
   box-sizing: border-box;
   font-size: 24px;
 `;
@@ -19,7 +19,6 @@ export const List = styled.ul`
 `;
 
 export const ListItem = styled.li`
-  margin: 0 8px;
 `;
 
 

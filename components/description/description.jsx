@@ -1,15 +1,31 @@
 import React from "react";
-import { Grid, Layout, Desc, Theme } from "./styles";
+import { Grid, Desc, Theme } from "./styles";
+import { Layout } from "../main/styles";
 import IconAvatar from "../icons/avatar";
 
 export function Description() {
   return (
-      <Grid maxWidth="490px">
+    <Layout>
+      <Grid maxWidth="390px">
         <Theme area="th_tech">Technologies</Theme>
-        <Desc area="desc_tech"><span>ReactJS</span><span>SvetleJS</span></Desc>
-        <Theme area="th_soft">Soft Skills</Theme>
-        <Desc area="desc_soft"><span>Sadness</span></Desc>
+        <Desc area="desc_tech">
+          <span className="row">HTML5</span>
+          <span className="row">CSS (SASS, SCSS)</span>
+          <span className="row">Javascript(ES5+)</span>
+          <span className="row">ReactJS</span>
+          <span className="row">Redux</span>
+          <span className="row">TypeScript</span>
+          <span className="row">redux-saga</span>
+          <span className="row">redux-thunk</span>
+          <span className="row">SvetleJS</span>
+        </Desc>
+        <Theme area="th_soft">Languages</Theme>
+        <Desc area="desc_soft">
+          <span className="row">Russian / Native</span>
+          <span className="row">English / B2</span>
+        </Desc>
       </Grid>
+    </Layout>
   );
 }
 
