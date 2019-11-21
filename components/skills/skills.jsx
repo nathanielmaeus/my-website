@@ -1,9 +1,8 @@
 import React from "react";
 import { Grid, Desc, Theme } from "./styles";
 import { Layout } from "../main/styles";
-import IconAvatar from "../icons/avatar";
 
-export function Description() {
+export function Skills() {
   return (
     <Layout>
       <Grid maxWidth="390px">

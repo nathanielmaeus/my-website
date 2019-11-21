@@ -22,12 +22,16 @@ export const LayoutItem = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   width: 100%;
   font-size: 1.2rem;
   letter-spacing: 0.8px;
   line-height: 1.4;
   max-width: ${props => props.maxWidth};
+
+  .main {
+    font-size: 2.2rem;
+    font-weight: 600;
+  }
 
   .main-info {
     display: flex;
@@ -51,10 +55,22 @@ export const LayoutItem = styled.div`
     font-family: "Tomorrow", sans-serif;
   }
 
-  .logo {
-    height: 88px;
-    width: 88px;
-    border-radius: 50%;
-    margin: 16px;
+  .icon {
+    animation: spin 1.5s ease-in-out infinite;
+    transform-origin: center bottom;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(-15deg);
+    }
+
+    50% {
+      transform: rotate(45deg);
+    }
+
+    100% {
+      transform: rotate(-15deg);
+    }
   }
 `;

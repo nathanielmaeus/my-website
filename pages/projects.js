@@ -27,9 +27,9 @@ const Home = () => (
       html,
       body {
         padding: 0;
-        background-color: #202020;
-        color: #fff;
-        font-family: "Dosis", "Lucida Sans Regular", "Lucida Grande",
+        background-color: #fff;
+        color: #000;
+        font-family: "Roboto", "Lucida Sans Regular", "Lucida Grande",
           "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
         font-size: 16px;
       }
