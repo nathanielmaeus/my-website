@@ -2,7 +2,6 @@ import React from "react";
 import { List, ListItem } from "./styles";
 import { Link } from "../../styles/Link";
 import { Layout } from "../main/styles";
-import IconAvatar from "../icons/avatar";
 
 export function WorkHistory() {
   return (

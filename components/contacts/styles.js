@@ -25,14 +25,17 @@ export const Wrapper = styled.div`
     color: #000;
   }
 `;
-export const Nav = styled.nav`
+export const List = styled.ul`
   a {
     margin: 0 16px;
     font-size: 1.2rem;
   }
 `;
-export const Logo = styled.h1`
-    font-weight: 600;
-
-  font-size: 1.5rem;
+export const ListItem = styled.li`
+  display: flex;
+  .icon {
+    width: 36px;
+    height: 36px;
+    margin: 0 8px;
+  }
 `;

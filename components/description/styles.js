@@ -6,7 +6,6 @@ export const Wrapper = styled.div`
   justify-content: space-between;
   margin: 64px 0;
   min-width: 468px;
-  height: 100vh;
   box-sizing: border-box;
   font-size: 24px;
 `;
@@ -42,16 +41,12 @@ export const LayoutItem = styled.div`
   }
 
   .logo {
-    width: 300px;
+    width: 470px;
     height: 100%;
   }
 
   .desc {
     font-size: 1rem;
-  }
-
-  .row {
-    margin: 0;
   }
 
   .name {
@@ -60,43 +55,5 @@ export const LayoutItem = styled.div`
     letter-spacing: 0.2rem;
     margin: 16px;
     font-family: "Tomorrow", sans-serif;
-  }
-
-  .icon {
-    position: relative;
-    left: -6px;
-    margin: 8px 0;
-    animation: spin 1.5s ease-out infinite;
-    transform-origin: 80% 100%;
-  }
-
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-
-    25% {
-      transform: rotate(45deg);
-    }
-
-    50% {
-      transform: rotate(0deg);
-    }
-
-    60% {
-      transform: rotate(35deg);
-    }
-
-    75% {
-      transform: rotate(5deg);
-    }
-
-    85% {
-      transform: rotate(30deg);
-    }
-
-    100% {
-      transform: rotate(0deg);
-    }
   }
 `;
