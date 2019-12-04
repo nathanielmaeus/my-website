@@ -5,12 +5,8 @@ module.exports = {
     ...siteConfig,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sitemap`,
-    `gatsby-plugin-offline`,
-    `gatsby-transformer-json`,
-    `gatsby-transformer-remark`,
-    `gatsby-plugin-eslint`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -18,8 +14,13 @@ module.exports = {
         path: `${__dirname}/content`,
       },
     },
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-offline`,
+    `gatsby-transformer-json`,
+    `gatsby-transformer-remark`,
+    `gatsby-plugin-eslint`,
+
     `gatsby-plugin-webpack-size`,
     {
       resolve: `gatsby-plugin-react-svg`,
@@ -27,6 +28,12 @@ module.exports = {
         rule: {
           include: /images\/.*\.svg$/,
         },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
       },
     },
   ],

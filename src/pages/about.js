@@ -3,15 +3,18 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from 'components/layout';
 import Head from 'components/head';
+import Main from 'components/main';
 
 const About = ({ data }) => (
   <Layout>
-    <Head pageTitle={data.aboutJson.title} />
-    <div
-      dangerouslySetInnerHTML={{
-        __html: data.aboutJson.content.childMarkdownRemark.html,
-      }}
-    ></div>
+    <Main>
+      <Head pageTitle={data.aboutJson.title} />
+      <div
+        dangerouslySetInnerHTML={{
+          __html: data.aboutJson.content.childMarkdownRemark.html,
+        }}
+      ></div>
+    </Main>
   </Layout>
 );
 

@@ -1,5 +1,10 @@
 {
   "title": "Home",
   "content": "intro.md",
-  "gallery": []
+  "gallery": [
+    {
+      "title": "Me",
+      "image": "../images/1233.jpg"
+    }
+  ]
 }

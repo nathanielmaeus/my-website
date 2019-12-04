@@ -3,20 +3,21 @@ import MEDIA from 'helpers/mediaTemplates';
 
 export const Text = styled.span`
   display: block;
+  color: '#000';
   font-weight: ${({ size }) => () => {
     switch (size) {
       case 'large':
-        return '400';
-      default:
         return '500';
+      default:
+        return '400';
     }
   }};
   font-size: ${({ size }) => () => {
     switch (size) {
       case 'large':
-        return '3.2rem';
+        return '1.5rem';
       default:
-        return '2rem';
+        return '1.3rem';
     }
   }};
   line-height: 1.2;
