@@ -6,6 +6,7 @@ import Skills from 'components/skills';
 import Main from 'components/main';
 import ImageItem from 'components/imageItem';
 import { graphql } from 'gatsby';
+import Projects from '../components/projects/projects';
 
 const Index = ({ data }) => {
   return (
@@ -23,6 +24,7 @@ const Index = ({ data }) => {
       </Main>
       <Main>
         <Skills />
+        <Projects items={data.homeJson.projects} />
       </Main>
     </Layout>
   );
@@ -45,6 +47,17 @@ export const query = graphql`
       }
       gallery {
         title
+        image {
+          childImageSharp {
+            fluid(maxHeight: 500, quality: 90) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      },
+      projects {
+        title
+        desc
         image {
           childImageSharp {
             fluid(maxHeight: 500, quality: 90) {
