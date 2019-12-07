@@ -11,3 +11,11 @@ export const Container = styled.div`
       0px 2px 4px rgba(71, 63, 79, 0.08);
   }
 `;
+
+export const Title = styled.h5`
+  padding: 4px;
+`;
+
+export const Desc = styled.div`
+  padding: 4px;
+`;

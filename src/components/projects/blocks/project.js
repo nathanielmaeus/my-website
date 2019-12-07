@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ImageItem from '../../imageItem/imageItem';
-import { Container } from './project.css';
+import { Container, Title, Desc } from './project.css';
 
 function Project({ item: { image, title, desc } }) {
   return (
     <Container>
       <ImageItem className="preview" image={image} />
-      <h5>{title}</h5>
-      <div> {desc}</div>
+      <Title>{title}</Title>
+      <Desc> {desc}</Desc>
     </Container>
   );
 }

@@ -4,13 +4,14 @@ const typography = new Typography({
   baseFontSize: '18px',
   baseLineHeight: 1.666,
   headerFontFamily: [
-    'Merriweather',
+    'Poppins',
     'Helvetica Neue',
     'Segoe UI',
     'Helvetica',
     'Arial',
     'sans-serif',
   ],
-  bodyFontFamily: ['Merriweather', 'serif'],
+  bodyFontFamily: ['monospace', 'serif'],
+  bodyColor: '#fff',
 });
 export default typography;

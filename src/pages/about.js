@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from 'components/layout';
 import Head from 'components/head';
-import Main from 'components/main';
+import { Main } from './about.css';
 
 const About = ({ data }) => (
   <Layout>

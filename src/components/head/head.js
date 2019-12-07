@@ -146,6 +146,11 @@ const Head = ({
       type="image/png"
     />
 
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
+      rel="stylesheet"
+    ></link>
+
     <script type="application/ld+json">
       {JSON.stringify(
         schemaGenerator({

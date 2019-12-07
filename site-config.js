@@ -5,8 +5,8 @@ module.exports = {
   siteTitleShort: `ViErmakov`,
   siteDescription: `To do site`,
   siteUrl: `https://todo.com`,
-  themeColor: `#000`,
-  backgroundColor: `#fff`,
+  themeColor: `#fff`,
+  backgroundColor: `#000`,
   pathPrefix: null,
   social: {
     twitter: `gatsbyjs`,

@@ -22,7 +22,7 @@ export default createGlobalStyle`
   }
 
   html {
-    background: #fff;
+    background: #000;
   }
 
   /* HTML5 display-role reset for older browsers */

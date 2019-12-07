@@ -7,23 +7,19 @@ import Main from 'components/main';
 import ImageItem from 'components/imageItem';
 import { graphql } from 'gatsby';
 import Projects from '../components/projects/projects';
+import { Bottom } from './index.css';
 
 const Index = ({ data }) => {
   return (
     <Layout>
       <Main>
-        <Title as="h2" size="large">
-          Hello there
-        </Title>
-        <p>
-          I am a Front-end Developer, graduate of Internet Technology. I have 3
-          years commercial experience providing front-end development, producing
-          high quality responsive websites and exceptional user experience.
-        </p>
-        <ImageItem width={400} image={data.homeJson.gallery[0].image} />
+        <Title />
+        <Bottom>
+          <ImageItem width={200} image={data.homeJson.gallery[0].image} />
+          <Skills />
+        </Bottom>
       </Main>
       <Main>
-        <Skills />
         <Projects items={data.homeJson.projects} />
       </Main>
     </Layout>
@@ -54,7 +50,7 @@ export const query = graphql`
             }
           }
         }
-      },
+      }
       projects {
         title
         desc
@@ -69,3 +65,9 @@ export const query = graphql`
     }
   }
 `;
+
+// <p>
+// I am a Front-end Developer, graduate of Internet Technology. I have 3
+// years commercial experience providing front-end development, producing
+// high quality responsive websites and exceptional user experience.
+// </p>

@@ -1,19 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Text } from './title.css';
+import { Container, Text, Subtitle } from './title.css';
 
-const Title = ({ children, as = 'span', size }) => {
+const Title = () => {
   return (
-    <Text as={as} size={size}>
-      {children}
-    </Text>
+    <Container>
+      <Text as="h1" size="large">
+        Viacheslav Ermakov
+      </Text>
+      <Subtitle>frontend developer, 22 y.o</Subtitle>
+    </Container>
   );
 };
 
-Title.propTypes = {
-  children: PropTypes.string.isRequired,
-  as: PropTypes.string,
-  size: PropTypes.oneOf(['large']),
-};
+Title.propTypes = {};
 
 export default Title;
