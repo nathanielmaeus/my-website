@@ -26,6 +26,7 @@ export const query = graphql`
       projects {
         title
         desc
+        href
         image {
           childImageSharp {
             fluid(maxHeight: 500, quality: 90) {
@@ -33,6 +34,7 @@ export const query = graphql`
             }
           }
         }
+        tags
       }
     }
   }

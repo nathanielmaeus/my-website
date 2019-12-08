@@ -4,6 +4,7 @@ import Project from './blocks/project';
 import { List } from './projects.css';
 
 function Projects({ items }) {
+  console.log(items)
   return (
     <List>
       {items.map(item => {

@@ -3,17 +3,21 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from 'components/layout';
 import Head from 'components/head';
-import { Main } from './about.css';
+import { Main, Container } from './about.css';
+import Contacts from '../components/contacts/contacts';
 
 const About = ({ data }) => (
   <Layout>
     <Main>
       <Head pageTitle={data.aboutJson.title} />
-      <div
-        dangerouslySetInnerHTML={{
-          __html: data.aboutJson.content.childMarkdownRemark.html,
-        }}
-      ></div>
+      <Container>
+        <section
+          dangerouslySetInnerHTML={{
+            __html: data.aboutJson.content.childMarkdownRemark.html,
+          }}
+        ></section>
+        <Contacts contacts={data.aboutJson.contacts} />
+      </Container>
     </Main>
   </Layout>
 );
@@ -28,6 +32,11 @@ export const query = graphql`
   query AboutQuery {
     aboutJson {
       title
+      contacts {
+        url
+        name
+        type
+      }
       content {
         childMarkdownRemark {
           html

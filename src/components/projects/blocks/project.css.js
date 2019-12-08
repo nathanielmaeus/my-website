@@ -12,10 +12,21 @@ export const Container = styled.div`
   }
 `;
 
-export const Title = styled.h5`
+export const Title = styled.a`
   padding: 4px;
 `;
 
 export const Desc = styled.div`
   padding: 4px;
+`;
+
+export const Tags = styled.div`
+  display: flex;
+`;
+
+export const Tag = styled.div`
+  margin: 0 4px;
+  padding: 0px 4px;
+  font-size: 0.8rem;
+  border: 1px solid #fff;
 `;

@@ -4,17 +4,34 @@
     {
       "title": "Screenshot_1",
       "desc": "Web application with bla vla adsad werwer aksmfaksd",
-      "image": "../images/Screenshot_1.jpg"
+      "image": "../images/Screenshot_1.jpg",
+      "tags": [
+        "react",
+        "redux",
+        "typescript"
+      ],
+      "href": "https://spoootifly.herokuapp.com/"
     },
     {
       "title": "Screenshot_2",
       "desc": "Web application with bla vla adsad werwer aksmfaksd",
-      "image": "../images/Screenshot_2.jpg"
+      "image": "../images/Screenshot_2.jpg",
+      "tags": [
+        "svelte",
+        "sapper"
+      ],
+      "href": "https://spoootifly.herokuapp.com/"
     },
     {
       "title": "Screenshot_3",
       "desc": "Web application with bla vla adsad werwer aksmfaksd",
-      "image": "../images/Screenshot_3.jpg"
+      "image": "../images/Screenshot_3.jpg",
+      "tags": [
+        "react",
+        "redux",
+        "typescript"
+      ],
+      "href": "https://spoootifly.herokuapp.com/"
     }
   ]
 }

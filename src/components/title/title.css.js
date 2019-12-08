@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import MEDIA from 'helpers/mediaTemplates';
 
 export const Container = styled.div`
-  margin-bottom: 6.5rem;
+  margin-bottom: 5.5rem;
 `;
 export const Text = styled.span`
   display: block;

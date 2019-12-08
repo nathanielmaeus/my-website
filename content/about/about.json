@@ -1,4 +1,21 @@
 {
   "title": "About",
-  "content": "content.md"
+  "content": "content.md",
+  "contacts": [
+    {
+      "type": "telegram",
+      "name": "@nathaniel.maeus",
+      "url": "https://t.me/nathaniel.maeus"
+    },
+    {
+      "type": "mail",
+      "name": "slavaskainet@gmail.com",
+      "url": "mailto:slavaskainet@gmail.com"
+    },
+    {
+      "type": "github",
+      "name": "@nathanielmaeus",
+      "url": "https://github.com/nathanielmaeus"
+    }
+  ]
 }
