@@ -2,8 +2,8 @@
   "title": "Portfolio",
   "projects": [
     {
-      "title": "Screenshot_1",
-      "desc": "Web application with bla vla adsad werwer aksmfaksd",
+      "title": "Spootifly",
+      "desc": "Music web player based on Deezer API",
       "image": "../images/Screenshot_1.jpg",
       "tags": [
         "react",
@@ -13,25 +13,33 @@
       "href": "https://spoootifly.herokuapp.com/"
     },
     {
-      "title": "Screenshot_2",
-      "desc": "Web application with bla vla adsad werwer aksmfaksd",
+      "title": "Space game",
+      "desc": "Small game made by Svelte. I made just for fun and try Svelte",
       "image": "../images/Screenshot_2.jpg",
       "tags": [
         "svelte",
         "sapper"
       ],
-      "href": "https://spoootifly.herokuapp.com/"
+      "href": "https://spacegame-svelte.herokuapp.com/"
     },
     {
-      "title": "Screenshot_3",
-      "desc": "Web application with bla vla adsad werwer aksmfaksd",
+      "title": "Unsplash",
+      "desc": "Photo Viewer based on Unsplash API ",
       "image": "../images/Screenshot_3.jpg",
       "tags": [
         "react",
-        "redux",
-        "typescript"
+        "redux"
       ],
-      "href": "https://spoootifly.herokuapp.com/"
+      "href": "https://unsplashapp.herokuapp.com/"
+    },
+    {
+      "title": "Telegram chart",
+      "desc": "Pure canvas charts for telegram contest",
+      "image": "../images/Screenshot_4.jpg",
+      "tags": [
+        "svelte"
+      ],
+      "href": "https://tg-chart.herokuapp.com/"
     }
   ]
 }

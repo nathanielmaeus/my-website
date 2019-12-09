@@ -6,21 +6,17 @@ import Skills from 'components/skills';
 import Main from 'components/main';
 import ImageItem from 'components/imageItem';
 import { graphql } from 'gatsby';
-import Projects from '../components/projects/projects';
 import { Bottom } from './index.css';
 
 const Index = ({ data }) => {
   return (
     <Layout>
       <Main>
-        <Title />
+        <Title title={data.homeJson.title} desc={data.homeJson.desc} />
         <Bottom>
           <ImageItem width={200} image={data.homeJson.gallery[0].image} />
           <Skills />
         </Bottom>
-      </Main>
-      <Main>
-        <Projects items={data.homeJson.projects} />
       </Main>
     </Layout>
   );
@@ -36,6 +32,7 @@ export const query = graphql`
   query HomepageQuery {
     homeJson {
       title
+      desc
       content {
         childMarkdownRemark {
           html

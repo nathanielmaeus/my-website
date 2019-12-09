@@ -20,4 +20,5 @@ export default function ImageItem({ image, width, className }) {
 ImageItem.propTypes = {
   image: PropTypes.object,
   width: PropTypes.number,
+  className: PropTypes.string,
 };

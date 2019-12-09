@@ -5,4 +5,8 @@ export const Bottom = styled.div`
   justify-content: space-between;
   margin-bottom: 2rem;
   border-top: 1px solid #fff;
+
+  img {
+    margin: 8px;
+  }
 `;

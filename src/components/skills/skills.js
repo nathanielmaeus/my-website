@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Table, Row, Column } from './skills.css';
 
 const Skills = () => {
@@ -15,17 +14,17 @@ const Skills = () => {
       </Row>
       <Row>
         <Column letter="spacing">FRAMEWORKS</Column>
-        <Column>react/redux(deeply) svelte vue 3(a little)</Column>
+        <Column>react/redux(deep) svelte vue 3(a little)</Column>
       </Row>
       <Row>
         <Column letter="spacing">TOOLS</Column>
         <Column>
-          redux-thunk(deeply) redux-saga(deeply) effector react-router
+          redux-thunk(deep) redux-saga(deep) effector react-router
         </Column>
       </Row>
       <Row>
         <Column letter="spacing">BUNDLE</Column>
-        <Column>webpack(deeply) rollup</Column>
+        <Column>webpack(deep) rollup</Column>
       </Row>
       <Row>
         <Column letter="spacing">JVM</Column>
@@ -38,5 +37,7 @@ const Skills = () => {
     </Table>
   );
 };
+
+Skills.propTypes = {};
 
 export default Skills;

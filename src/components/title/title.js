@@ -2,17 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Container, Text, Subtitle } from './title.css';
 
-const Title = () => {
+const Title = ({ title, desc }) => {
   return (
     <Container>
       <Text as="h1" size="large">
-        Viacheslav Ermakov
+        {title}
       </Text>
-      <Subtitle>frontend developer, 22 y.o</Subtitle>
+      <Subtitle>{desc}</Subtitle>
     </Container>
   );
 };
 
-Title.propTypes = {};
+Title.propTypes = {
+  title: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
+};
 
 export default Title;
