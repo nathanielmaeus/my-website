@@ -14,7 +14,7 @@ const Index = ({ data }) => {
       <Main>
         <Title title={data.homeJson.title} desc={data.homeJson.desc} />
         <Bottom>
-          <ImageItem width={200} image={data.homeJson.gallery[0].image} />
+          <ImageItem width={250} image={data.homeJson.gallery[0].image} />
           <Skills />
         </Bottom>
       </Main>

@@ -1,8 +1,12 @@
 import styled from 'styled-components';
+import MEDIA from 'helpers/mediaTemplates';
 
 export const Container = styled.div`
-  justify-self: flex-end;
   margin: 0.8rem 5rem;
+
+  ${MEDIA.TABLET`
+    margin: 1rem 0;
+  `};
 `;
 
 export const Contact = styled.div`

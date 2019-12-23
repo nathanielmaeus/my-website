@@ -2,9 +2,12 @@ import styled from 'styled-components';
 import MEDIA from 'helpers/mediaTemplates';
 
 export const Table = styled.div`
-  padding-bottom: 1rem;
   margin-left: 8rem;
   font-size: 1rem;
+  ${MEDIA.TABLET`
+    margin-left: 0;
+    margin-top: 2rem;
+  `};
 `;
 
 export const Row = styled.div`
@@ -24,4 +27,10 @@ export const Column = styled.div`
   letter-spacing: ${({ letter }) => () => {
     if (letter === 'spacing') return '4px';
   }};
+
+  ${MEDIA.TABLET`
+    max-width: ${({ letter }) => () => {
+      if (letter === 'spacing') return '85px';
+    }};
+  `};
 `;

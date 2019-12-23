@@ -4,7 +4,7 @@ export const Container = styled.nav`
   ul {
     display: flex;
     list-style: none;
-    padding: 1rem;
+    padding: 1rem 2rem;
 
     li {
       text-transform: uppercase;

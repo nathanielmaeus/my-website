@@ -6,7 +6,7 @@ import { Container, Title, Desc, Tag, Tags } from './project.css';
 function Project({ item: { image, title, desc, tags = [], href } }) {
   return (
     <Container>
-      <ImageItem className="preview" image={image} />
+      <ImageItem className="preview" image={image} alt={title} />
       <Title href={href} target="_blink">
         {title}
       </Title>

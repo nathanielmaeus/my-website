@@ -2,8 +2,18 @@ import styled from 'styled-components';
 import MEDIA from 'helpers/mediaTemplates';
 
 export const Container = styled.div`
-  margin-bottom: 5.5rem;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  ${MEDIA.TABLET`
+  height: 20vh
+    margin: 2rem 0;
+  `};
 `;
+
 export const Text = styled.span`
   display: block;
   text-align: center;
@@ -29,9 +39,9 @@ export const Text = styled.span`
     font-size: ${({ size }) => () => {
       switch (size) {
         case 'large':
-          return '2.6rem';
-        default:
           return '2rem';
+        default:
+          return '1.2rem';
       }
     }};
   `};
@@ -43,4 +53,9 @@ export const Subtitle = styled.h4`
   font-weight: 100;
   font-size: 2rem;
   color: #313131;
+
+  ${MEDIA.TABLET`
+    margin: 1rem 0;
+    font-size: 1.2rem;
+  `};
 `;

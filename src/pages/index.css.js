@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import MEDIA from 'helpers/mediaTemplates';
 
 export const Bottom = styled.div`
   display: flex;
@@ -9,4 +10,11 @@ export const Bottom = styled.div`
   img {
     margin: 8px;
   }
+
+  ${MEDIA.TABLET`
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: none;
+  `};
 `;

@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import { accent } from 'constants/theme';
+import MEDIA from 'helpers/mediaTemplates';
 
 export default createGlobalStyle`
   html, body, div, span, applet, object, iframe,
@@ -23,6 +24,10 @@ export default createGlobalStyle`
 
   html {
     background: #000;
+
+    ${MEDIA.TABLET`
+      font-size: 16px;
+    `};
   }
 
   /* HTML5 display-role reset for older browsers */
@@ -74,3 +79,4 @@ export default createGlobalStyle`
     margin: 0.7rem 0;
   }
 `;
+
