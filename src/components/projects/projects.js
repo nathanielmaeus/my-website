@@ -6,8 +6,8 @@ import { List } from './projects.css';
 function Projects({ items }) {
   return (
     <List>
-      {items.map(item => {
-        return <Project key={item.title} item={item} />;
+      {items.map((item, idx) => {
+        return <Project key={item.title} idx={idx} item={item} />;
       })}
     </List>
   );

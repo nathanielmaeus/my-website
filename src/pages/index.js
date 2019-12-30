@@ -1,21 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
+
 import Layout from 'components/layout';
 import Title from 'components/title';
 import Skills from 'components/skills';
 import Main from 'components/main';
 import ImageItem from 'components/imageItem';
-import { graphql } from 'gatsby';
+
 import { Bottom } from './index.css';
 
-const Index = ({ data }) => {
+const Index = ({ data: { homeJson } }) => {
+  const { title, desc, gallery, skills } = homeJson;
   return (
     <Layout>
       <Main>
-        <Title title={data.homeJson.title} desc={data.homeJson.desc} />
+        <Title title={title} desc={desc} />
         <Bottom>
-          <ImageItem width={250} image={data.homeJson.gallery[0].image} />
-          <Skills />
+          <ImageItem width="250px" image={gallery[0].image} alt="avatar" />
+          <Skills skills={skills} />
         </Bottom>
       </Main>
     </Layout>
@@ -23,7 +26,14 @@ const Index = ({ data }) => {
 };
 
 Index.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.shape({
+    homeJson: PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      desc: PropTypes.string.isRequired,
+      gallery: PropTypes.array.isRequired,
+      skills: PropTypes.array.isRequired,
+    }).isRequired,
+  }).isRequired,
 };
 
 export default Index;
@@ -48,23 +58,10 @@ export const query = graphql`
           }
         }
       }
-      projects {
+      skills {
         title
-        desc
-        image {
-          childImageSharp {
-            fluid(maxHeight: 500, quality: 90) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
+        tools
       }
     }
   }
 `;
-
-// <p>
-// I am a Front-end Developer, graduate of Internet Technology. I have 3
-// years commercial experience providing front-end development, producing
-// high quality responsive websites and exceptional user experience.
-// </p>

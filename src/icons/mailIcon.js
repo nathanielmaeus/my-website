@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const MailIcon = ({ fill, ...props }) => (
   <svg viewBox="0 0 479.058 479.058" {...props}>
@@ -8,5 +9,13 @@ const MailIcon = ({ fill, ...props }) => (
     />
   </svg>
 );
+
+MailIcon.propTypes = {
+  fill: PropTypes.string,
+};
+
+MailIcon.defaultProps = {
+  fill: '#fff',
+};
 
 export default MailIcon;

@@ -79,4 +79,3 @@ export default createGlobalStyle`
     margin: 0.7rem 0;
   }
 `;
-

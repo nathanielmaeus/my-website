@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const GithubIcon = ({ fill, ...props }) => (
   <svg viewBox="0 0 512 512" {...props}>
@@ -8,5 +9,13 @@ const GithubIcon = ({ fill, ...props }) => (
     />
   </svg>
 );
+
+GithubIcon.propTypes = {
+  fill: PropTypes.string,
+};
+
+GithubIcon.defaultProps = {
+  fill: '#fff',
+};
 
 export default GithubIcon;

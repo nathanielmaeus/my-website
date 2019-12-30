@@ -2,9 +2,11 @@ import styled from 'styled-components';
 import MEDIA from 'helpers/mediaTemplates';
 
 export const Table = styled.div`
+  width: 60%;
   margin-left: 8rem;
   font-size: 1rem;
   ${MEDIA.TABLET`
+    width: 100%;
     margin-left: 0;
     margin-top: 2rem;
   `};
@@ -33,4 +35,8 @@ export const Column = styled.div`
       if (letter === 'spacing') return '85px';
     }};
   `};
+`;
+
+export const Highlight = styled.span`
+  background: #750707;
 `;

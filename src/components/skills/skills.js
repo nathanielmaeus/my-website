@@ -1,43 +1,27 @@
 import React from 'react';
-import { Table, Row, Column } from './skills.css';
+import PropTypes from 'prop-types';
 
-const Skills = () => {
+import { Table, Row, Column, Highlight } from './skills.css';
+
+const Skills = ({ skills }) => {
   return (
     <Table>
-      <Row>
-        <Column letter="spacing">CORE</Column>
-        <Column>JavaScript(ES5+)</Column>
-      </Row>
-      <Row>
-        <Column letter="spacing">STYLES</Column>
-        <Column>css scss css-in-js</Column>
-      </Row>
-      <Row>
-        <Column letter="spacing">FRAMEWORKS</Column>
-        <Column>react/redux(deep) svelte vue 3(a little)</Column>
-      </Row>
-      <Row>
-        <Column letter="spacing">TOOLS</Column>
-        <Column>
-          redux-thunk(deep) redux-saga(deep) effector react-router
-        </Column>
-      </Row>
-      <Row>
-        <Column letter="spacing">BUNDLE</Column>
-        <Column>webpack(deep) rollup</Column>
-      </Row>
-      <Row>
-        <Column letter="spacing">JVM</Column>
-        <Column>gatsby next</Column>
-      </Row>
-      <Row>
-        <Column letter="spacing">REST</Column>
-        <Column>typescript graphql </Column>
-      </Row>
+      {skills.map(item => {
+        return (
+          <Row key={item.title}>
+            <Column letter="spacing">
+              <Highlight>{item.title}</Highlight>
+            </Column>
+            <Column>{item.tools}</Column>
+          </Row>
+        );
+      })}
     </Table>
   );
 };
 
-Skills.propTypes = {};
+Skills.propTypes = {
+  skills: PropTypes.array,
+};
 
 export default Skills;

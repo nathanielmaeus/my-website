@@ -8,21 +8,34 @@
       "image": "../images/1233.jpg"
     }
   ],
-  "projects": [
+  "skills": [
     {
-      "title": "Screenshot_1",
-      "desc": "Web application with bla vla adsad werwer aksmfaksd",
-      "image": "../images/Screenshot_1.jpg"
+      "title": "CORE",
+      "tools": "JavaScript(ES5+)"
     },
     {
-      "title": "Screenshot_2",
-      "desc": "Web application with bla vla adsad werwer aksmfaksd",
-      "image": "../images/Screenshot_2.jpg"
+      "title": "STYLES",
+      "tools": "css scss css-in-js"
     },
     {
-      "title": "Screenshot_3",
-      "desc": "Web application with bla vla adsad werwer aksmfaksd",
-      "image": "../images/Screenshot_3.jpg"
+      "title": "FRAMEWORKS",
+      "tools": "react/redux svelte vue 3(a little)"
+    },
+    {
+      "title": "TOOLS",
+      "tools": "redux-thunk redux-saga effector react-router"
+    },
+    {
+      "title": "BUNDLE",
+      "tools": "webpack rollup"
+    },
+    {
+      "title": "JVM",
+      "tools": "gatsby next"
+    },
+    {
+      "title": "other",
+      "tools": "typescript graphql"
     }
   ]
 }

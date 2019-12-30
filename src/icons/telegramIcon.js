@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const TelegramIcon = ({ fill, ...props }) => (
   <svg viewBox="0 -39 512.00011 512" {...props}>
@@ -8,5 +9,13 @@ const TelegramIcon = ({ fill, ...props }) => (
     />
   </svg>
 );
+
+TelegramIcon.propTypes = {
+  fill: PropTypes.string,
+};
+
+TelegramIcon.defaultProps = {
+  fill: '#fff',
+};
 
 export default TelegramIcon;

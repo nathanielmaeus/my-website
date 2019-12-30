@@ -1,26 +1,40 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ImageItem from '../../imageItem/imageItem';
-import { Container, Title, Desc, Tag, Tags } from './project.css';
+import {
+  Container,
+  Title,
+  Desc,
+  Tag,
+  Tags,
+  Content,
+  ImgWrapper,
+} from './project.css';
 
-function Project({ item: { image, title, desc, tags = [], href } }) {
+function Project({ idx, item: { image, title, desc, tags = [], href } }) {
   return (
-    <Container>
-      <ImageItem className="preview" image={image} alt={title} />
-      <Title href={href} target="_blink">
-        {title}
-      </Title>
-      <Desc> {desc}</Desc>
-      <Tags>
-        {tags.map(tag => {
-          return <Tag key={tag}>{tag}</Tag>;
-        })}
-      </Tags>
+    <Container direction={idx % 2 === 0 ? 'row' : 'row-reverse'}>
+      <ImgWrapper>
+        <ImageItem className="preview" image={image} alt={title} />
+      </ImgWrapper>
+
+      <Content>
+        <Title href={href} target="_blink">
+          {title}
+        </Title>
+        <Desc> {desc}</Desc>
+        <Tags>
+          {tags.map(tag => {
+            return <Tag key={tag}>{tag}</Tag>;
+          })}
+        </Tags>
+      </Content>
     </Container>
   );
 }
 
 Project.propTypes = {
+  idx: PropTypes.number,
   item: PropTypes.shape({
     title: PropTypes.string,
     desc: PropTypes.string,

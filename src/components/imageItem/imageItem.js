@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 import { Container } from './imageItem.css';
 
-export default function ImageItem({ image, alt, width, className }) {
+export default function ImageItem({ image, alt, width }) {
   return (
-    <Container width={`${width}px`}>
+    <Container width={`${width}`}>
       <Img fluid={image ? image.childImageSharp.fluid : {}} alt={alt} />
     </Container>
   );
@@ -14,6 +14,5 @@ export default function ImageItem({ image, alt, width, className }) {
 ImageItem.propTypes = {
   image: PropTypes.object,
   alt: PropTypes.string.isRequired,
-  width: PropTypes.number,
-  className: PropTypes.string,
+  width: PropTypes.string,
 };

@@ -1,22 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
+
 import Layout from 'components/layout';
 import Head from 'components/head';
-import { Main, Container } from './about.css';
-import Contacts from '../components/contacts/contacts';
+import Contacts from '../components/contacts';
 
-const About = ({ data }) => (
+import { Main, Container } from './about.css';
+
+const About = ({ data: { aboutJson } }) => (
   <Layout>
     <Main>
-      <Head pageTitle={data.aboutJson.title} />
+      <Head pageTitle={aboutJson.title} />
       <Container>
         <section
           dangerouslySetInnerHTML={{
-            __html: data.aboutJson.content.childMarkdownRemark.html,
+            __html: aboutJson.content.childMarkdownRemark.html,
           }}
         ></section>
-        <Contacts contacts={data.aboutJson.contacts} />
+        <Contacts contacts={aboutJson.contacts} />
       </Container>
     </Main>
   </Layout>

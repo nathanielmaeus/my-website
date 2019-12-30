@@ -1,19 +1,25 @@
 import styled from 'styled-components';
+import MEDIA from 'helpers/mediaTemplates';
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: column;
+  margin: 2rem 0;
+  flex-direction: ${({ direction }) => direction};
 
-  padding: 1rem;
-
-  .preview {
-    box-shadow: 0px 1px 2px rgba(46, 41, 51, 0.08),
-      0px 2px 4px rgba(71, 63, 79, 0.08);
-  }
+  ${MEDIA.TABLET`
+    flex-direction: column;
+  `}
 `;
 
 export const Title = styled.a`
   padding: 4px;
+`;
+
+export const Content = styled.div`
+  width: 30%;
+  ${MEDIA.TABLET`
+    width:100%;
+  `}
 `;
 
 export const Desc = styled.div`
@@ -29,4 +35,14 @@ export const Tag = styled.div`
   padding: 0px 4px;
   font-size: 0.8rem;
   border: 1px solid #fff;
+`;
+
+export const ImgWrapper = styled.div`
+  width: 70%;
+  margin: 0 2rem;
+
+  ${MEDIA.TABLET`
+    margin: 0;
+    width:100%;
+  `}
 `;
