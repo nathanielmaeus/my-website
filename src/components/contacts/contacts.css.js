@@ -21,12 +21,12 @@ export const Contact = styled.div`
 
   a {
     margin-left: 1.2rem;
-    background: #750707;
-    color: #fff;
+    background: #dbf32c;
+    color: #000;
     text-decoration: none;
 
     &:hover {
-      background: #801a1a;
+      background: #7a8a06;
       text-decoration: underline;
     }
   }

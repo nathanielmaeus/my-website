@@ -39,6 +39,6 @@ export const Column = styled.div`
 `;
 
 export const Highlight = styled.span`
-  background: #750707;
-  color: #fff;
+  background: #dbf32c;
+  color: #000;
 `;
