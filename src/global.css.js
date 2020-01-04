@@ -23,11 +23,17 @@ export default createGlobalStyle`
   }
 
   html {
-    background: #000;
+    transition: 0.3s;
+    background: ${({ theme }) => (theme === 'light' ? '#fff' : '#000')};
 
     ${MEDIA.TABLET`
       font-size: 16px;
     `};
+  }
+
+  body {
+    color: ${({ theme }) => (theme === 'light' ? '#000' : '#fff')};
+
   }
 
   /* HTML5 display-role reset for older browsers */

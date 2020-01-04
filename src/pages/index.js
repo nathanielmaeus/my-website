@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
+import { Consumer } from 'store/createContext';
 
 import Layout from 'components/layout';
 import Title from 'components/title';
@@ -13,15 +14,19 @@ import { Bottom } from './index.css';
 const Index = ({ data: { homeJson } }) => {
   const { title, desc, gallery, skills } = homeJson;
   return (
-    <Layout>
-      <Main>
-        <Title title={title} desc={desc} />
-        <Bottom>
-          <ImageItem width="250px" image={gallery[0].image} alt="avatar" />
-          <Skills skills={skills} />
-        </Bottom>
-      </Main>
-    </Layout>
+    <Consumer>
+      {({ theme }) => (
+        <Layout>
+          <Main>
+            <Title title={title} desc={desc} />
+            <Bottom theme={theme}>
+              <ImageItem width="250px" image={gallery[0].image} alt="avatar" />
+              <Skills skills={skills} />
+            </Bottom>
+          </Main>
+        </Layout>
+      )}
+    </Consumer>
   );
 };
 

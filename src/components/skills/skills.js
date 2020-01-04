@@ -1,22 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Consumer } from 'store/createContext';
 
 import { Table, Row, Column, Highlight } from './skills.css';
 
 const Skills = ({ skills }) => {
   return (
-    <Table>
-      {skills.map(item => {
-        return (
-          <Row key={item.title}>
-            <Column letter="spacing">
-              <Highlight>{item.title}</Highlight>
-            </Column>
-            <Column>{item.tools}</Column>
-          </Row>
-        );
-      })}
-    </Table>
+    <Consumer>
+      {({ theme }) => (
+        <Table>
+          {skills.map(item => {
+            return (
+              <Row key={item.title} theme={theme}>
+                <Column letter="spacing">
+                  <Highlight>{item.title}</Highlight>
+                </Column>
+                <Column>{item.tools}</Column>
+              </Row>
+            );
+          })}
+        </Table>
+      )}
+    </Consumer>
   );
 };
 

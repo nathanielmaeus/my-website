@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Consumer } from 'store/createContext';
+
 import ImageItem from '../../imageItem/imageItem';
 import {
   Container,
@@ -13,23 +15,31 @@ import {
 
 function Project({ idx, item: { image, title, desc, tags = [], href } }) {
   return (
-    <Container direction={idx % 2 === 0 ? 'row' : 'row-reverse'}>
-      <ImgWrapper>
-        <ImageItem className="preview" image={image} alt={title} />
-      </ImgWrapper>
+    <Consumer>
+      {({ theme }) => (
+        <Container direction={idx % 2 === 0 ? 'row' : 'row-reverse'}>
+          <ImgWrapper>
+            <ImageItem className="preview" image={image} alt={title} />
+          </ImgWrapper>
 
-      <Content>
-        <Title href={href} target="_blink">
-          {title}
-        </Title>
-        <Desc> {desc}</Desc>
-        <Tags>
-          {tags.map(tag => {
-            return <Tag key={tag}>{tag}</Tag>;
-          })}
-        </Tags>
-      </Content>
-    </Container>
+          <Content>
+            <Title href={href} target="_blink">
+              {title}
+            </Title>
+            <Desc> {desc}</Desc>
+            <Tags>
+              {tags.map(tag => {
+                return (
+                  <Tag key={tag} theme={theme}>
+                    {tag}
+                  </Tag>
+                );
+              })}
+            </Tags>
+          </Content>
+        </Container>
+      )}
+    </Consumer>
   );
 }
 

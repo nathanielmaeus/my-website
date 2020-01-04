@@ -18,7 +18,8 @@ export const Row = styled.div`
   grid-template-columns: 1fr 2fr;
   grid-template-rows: repeat(1, minmax(50px, 1fr));
   padding-bottom: 0.4rem;
-  border-bottom: 1px solid #fff;
+  border-bottom: ${({ theme }) =>
+    `1px solid ${theme === 'light' ? '#000' : '#fff'}`};
 
   &:last-child {
     border-bottom: none;
@@ -39,4 +40,5 @@ export const Column = styled.div`
 
 export const Highlight = styled.span`
   background: #750707;
+  color: #fff;
 `;

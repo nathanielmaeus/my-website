@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.nav`
   ul {
     display: flex;
+    align-items: center;
     list-style: none;
     padding: 1rem 2rem;
 
@@ -12,6 +13,20 @@ export const Container = styled.nav`
 
       & + li {
         margin-left: 2rem;
+      }
+    }
+  }
+`;
+
+export const Switch = styled.li`
+  svg {
+    transition: 0.3s;
+    cursor: pointer;
+
+    :hover {
+      fill: ${({ theme }) => theme};
+      g:last-child {
+        fill: ${({ theme }) => theme};
       }
     }
   }

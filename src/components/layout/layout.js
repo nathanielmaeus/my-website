@@ -4,14 +4,19 @@ import { StaticQuery, graphql } from 'gatsby';
 import Head from 'components/head';
 import Header from 'components/header';
 import GlobalStyle from 'global.css.js';
+import { Consumer } from 'store/createContext';
 
 const Layout = ({ data, children }) => (
-  <>
-    <GlobalStyle />
-    <Head />
-    <Header title={data.site.siteMetadata.siteTitle} />
-    {children}
-  </>
+  <Consumer>
+    {({ theme }) => (
+      <>
+        <GlobalStyle theme={theme} />
+        <Head />
+        <Header title={data.site.siteMetadata.siteTitle} />
+        {children}
+      </>
+    )}
+  </Consumer>
 );
 
 Layout.propTypes = {

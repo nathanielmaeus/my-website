@@ -5,7 +5,8 @@ export const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 2rem;
-  border-top: 1px solid #fff;
+  border-top: ${({ theme }) =>
+    `1px solid ${theme === 'light' ? '#000' : '#fff'}`};
 
   img {
     margin: 8px;
