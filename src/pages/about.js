@@ -6,7 +6,24 @@ import Layout from 'components/layout';
 import Head from 'components/head';
 import Contacts from '../components/contacts';
 
-import { Main, Container } from './about.css';
+import styled from 'styled-components';
+import MEDIA from 'helpers/mediaTemplates';
+
+const Main = styled.div`
+  margin: 0 4rem;
+
+  ${MEDIA.TABLET`
+    margin: 0 1rem;
+  `};
+`;
+
+const Container = styled.div`
+  display: flex;
+
+  ${MEDIA.TABLET`
+    flex-direction: column-reverse;
+  `};
+`;
 
 const About = ({ data: { aboutJson } }) => (
   <Layout>

@@ -5,7 +5,16 @@ import { graphql } from 'gatsby';
 import Layout from 'components/layout';
 import Projects from '../components/projects/projects';
 
-import { Main } from './about.css';
+import styled from 'styled-components';
+import MEDIA from 'helpers/mediaTemplates';
+
+const Main = styled.div`
+  margin: 0 4rem;
+
+  ${MEDIA.TABLET`
+    margin: 0 1rem;
+  `};
+`;
 
 const Portfolio = ({ data: { portfolioJson } }) => (
   <Layout>
