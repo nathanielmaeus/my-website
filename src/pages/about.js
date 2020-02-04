@@ -13,7 +13,7 @@ const Main = styled.div`
   margin: 0 4rem;
 
   ${MEDIA.TABLET`
-    margin: 0 1rem;
+    margin: 0 1rem 1rem;  
   `};
 `;
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Container, Contact } from './contacts.css';
+import { Container, Contact, Text } from './contacts.css';
 import { Consumer } from 'store/createContext';
 
 import MailIcon from '../../icons/mailIcon';
@@ -27,9 +27,11 @@ export default function Contacts({ contacts }) {
             return (
               <Contact key={contact.name}>
                 {logos(contact.type, theme)}
-                <a href={contact.url} target="_blink">
-                  {contact.name}
-                </a>
+                <Text>
+                  <a href={contact.url} target="_blink">
+                    {contact.name}
+                  </a>
+                </Text>
               </Contact>
             );
           })}

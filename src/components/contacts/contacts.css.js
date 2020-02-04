@@ -18,16 +18,8 @@ export const Contact = styled.div`
   display: flex;
   align-content: center;
   margin-bottom: 0.6rem;
+`;
 
-  a {
-    margin-left: 1.2rem;
-    background: #dbf32c;
-    color: #000;
-    text-decoration: none;
-
-    &:hover {
-      background: #7a8a06;
-      text-decoration: underline;
-    }
-  }
+export const Text = styled.div`
+  margin-left: 1.2rem;
 `;

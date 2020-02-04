@@ -7,20 +7,13 @@ export const Container = styled.div`
   flex-direction: ${({ direction }) => direction};
 
   ${MEDIA.TABLET`
+    margin: 1rem 0;
     flex-direction: column;
   `}
 `;
 
 export const Title = styled.a`
-  padding: 4px;
-  background: #dbf32c;
-  color: #000;
-  text-decoration: none;
-
-  &:hover {
-    background: #7a8a06;
-    text-decoration: underline;
-  }
+  padding: 4px 0;
 `;
 
 export const Content = styled.div`
@@ -32,7 +25,7 @@ export const Content = styled.div`
 `;
 
 export const Desc = styled.div`
-  padding: 4px;
+  padding: 0px 4px;
 `;
 
 export const Tags = styled.div`
@@ -47,9 +40,17 @@ export const Tag = styled.div`
   border: ${({ theme }) => `1px solid ${theme === 'light' ? '#000' : '#fff'}`};
 `;
 
-export const ImgWrapper = styled.div`
+export const ImgWrapper = styled.a`
   width: 70%;
-  margin: 0 2rem;
+  margin: 0 4rem;
+
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    border: none;
+    background: none;
+  }
 
   ${MEDIA.TABLET`
     margin: 0;

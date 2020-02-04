@@ -9,7 +9,7 @@ export const Container = styled.div`
   justify-content: center;
 
   ${MEDIA.TABLET`
-  height: 20vh
+    height: 20vh;
     margin: 2rem 0;
   `};
 `;
@@ -52,7 +52,7 @@ export const Subtitle = styled.h4`
   font-family: Poppins;
   font-weight: 100;
   font-size: 2rem;
-  color: #313131;
+  color: #707070;
 
   ${MEDIA.TABLET`
     margin: 1rem 0;

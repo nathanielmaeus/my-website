@@ -4,7 +4,7 @@ import MEDIA from 'helpers/mediaTemplates';
 
 export default createGlobalStyle`
   html, body, div, span, applet, object, iframe,
-  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+   h2, h3, h4, h5, h6, p, blockquote, pre,
   a, abbr, acronym, address, big, cite, code,
   del, dfn, em, img, ins, kbd, q, s, samp,
   small, strike, strong, sub, sup, tt, var,
@@ -22,9 +22,13 @@ export default createGlobalStyle`
     vertical-align: baseline;
   }
 
+  h2 {
+    margin: 2rem 0 1rem;
+  }
+
   html {
     transition: 0.3s;
-    background: ${({ theme }) => (theme === 'light' ? '#fff' : '#000')};
+    background: ${({ theme }) => (theme === 'light' ? '#fff' : '#212121')};
 
     ${MEDIA.TABLET`
       font-size: 16px;
@@ -62,7 +66,16 @@ export default createGlobalStyle`
   }
 
   a {
-    color: ${accent};
+    color: ${({ theme }) => (theme === 'light' ? '#000' : '#fff')};
+    padding: 2px 0;
+    border-bottom: 2px solid #dbf32c;
+    text-decoration: none;
+
+    &:hover {
+      color: #000;
+      background: #dbf32c;
+      text-decoration: none;
+    }
   }
 
   pre {

@@ -18,7 +18,7 @@ function Project({ idx, item: { image, title, desc, tags = [], href } }) {
     <Consumer>
       {({ theme }) => (
         <Container direction={idx % 2 === 0 ? 'row' : 'row-reverse'}>
-          <ImgWrapper>
+          <ImgWrapper href={href} target="_blank">
             <ImageItem className="preview" image={image} alt={title} />
           </ImgWrapper>
 
