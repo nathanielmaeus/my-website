@@ -41,7 +41,7 @@ export const query = graphql`
         title
         desc
         href
-        image {
+        images {
           childImageSharp {
             fluid(maxHeight: 500, quality: 90) {
               ...GatsbyImageSharpFluid_withWebp

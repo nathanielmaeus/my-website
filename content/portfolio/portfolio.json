@@ -4,7 +4,7 @@
     {
       "title": "Spootifly",
       "desc": "Music web player based on Deezer API",
-      "image": "../images/Screenshot_1.jpg",
+      "images": [ "../images/spot_1.jpg", "../images/spot_3.jpg"],
       "tags": [
         "react",
         "redux",
@@ -15,7 +15,8 @@
     {
       "title": "Space game",
       "desc": "Small game made by Svelte. I made just for fun and try Svelte",
-      "image": "../images/Screenshot_2.jpg",
+      "images": ["../images/space_1.jpg", "../images/space_3.jpg"],
+
       "tags": [
         "svelte",
         "sapper"
@@ -25,7 +26,8 @@
     {
       "title": "Unsplash",
       "desc": "Photo Viewer based on Unsplash API ",
-      "image": "../images/Screenshot_3.jpg",
+      "images": ["../images/spl_1.jpg", "../images/spl_2.jpg", "../images/spl_3.jpg"],
+
       "tags": [
         "react",
         "redux"
@@ -35,7 +37,8 @@
     {
       "title": "Telegram chart",
       "desc": "Pure canvas charts for telegram contest",
-      "image": "../images/Screenshot_5.jpg",
+      "images": ["../images/tg_1.jpg", "../images/tg_2.jpg", "../images/Screenshot_5.jpg"],
+
       "tags": [
         "svelte"
       ],

@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 
 let io;
 const listeners = [];
@@ -15,9 +14,8 @@ function getIO(rootMargin = '-50px') {
         entries.forEach(entry => {
           listeners.forEach(l => {
             if (l[0] === entry.target) {
-              // Edge doesn't currently support isIntersecting, so also test for an intersectionRatio > 0
+              // Edge doesn't currently support isIntersecting
               if (entry.isIntersecting || entry.intersectionRatio > 0) {
-                // io.unobserve(l[0]);
                 l[1](true);
               } else if (
                 !entry.isIntersecting ||
@@ -36,96 +34,61 @@ function getIO(rootMargin = '-50px') {
   return io;
 }
 
-const listenToIntersections = (el, cb, rm) => {
+const observeElement = (el, cb, rm) => {
   const io = getIO(rm);
   io.observe(el);
   listeners.push([el, cb]);
   return io;
 };
 
-export default class IO extends Component {
-  constructor() {
-    super();
+export function useIntersectionObserver(ref, rootMargin) {
+  const [isVisible, setIsVisible] = React.useState(false);
+  const [hasBeenVisible, setHasBeenVisible] = React.useState(false);
+  const [, setIOSupported] = React.useState(false);
 
-    // Always not visible while server rendering.
-    this.state = {
-      isVisible: false,
-      hasBeenVisible: false,
-      IOSupported: false,
-    };
-  }
-
-  async componentDidMount() {
-    // Default values
-    let isVisible = true;
-    let hasBeenVisible = true;
-    let IOSupported = false;
-
-    // Intersection Observer polyfill
-    if (typeof window !== 'undefined' && !window.IntersectionObserver) {
-      await import('intersection-observer').then(() => {
-        // eslint-disable-next-line no-console
-        console.log('IntersectionObserver polyfill injected.');
-      });
-    }
-
-    // Check if browser (now) supports IntersectionObserver
-    if (typeof window !== 'undefined' && window.IntersectionObserver) {
-      isVisible = false;
-      hasBeenVisible = false;
-      IOSupported = true;
-    }
-
-    this.setState(
-      {
-        isVisible,
-        hasBeenVisible,
-        IOSupported,
-      },
-      this.listenToIntersections
-    );
-  }
-
-  listenToIntersections = () => {
-    this.io = listenToIntersections(
-      this.ref,
-      isVisible => {
-        this.setState(state => {
-          let newState = {};
-
-          if (!state.hasBeenVisible && isVisible) {
-            newState = { hasBeenVisible: true };
+  React.useEffect(() => {
+    const listenToIntersections = () => {
+      io = observeElement(
+        ref.current,
+        isVisible => {
+          if (!hasBeenVisible && isVisible) {
+            setHasBeenVisible(true);
           }
+          setIsVisible(isVisible);
+        },
+        rootMargin
+      );
+    };
 
-          return { isVisible, ...newState };
+    async function initIO() {
+      let isVisible = true;
+      let hasBeenVisible = true;
+      let IOSupported = false;
+
+      // Intersection Observer polyfill
+      if (typeof window !== 'undefined' && !window.IntersectionObserver) {
+        await import('intersection-observer').then(() => {
+          // eslint-disable-next-line no-console
+          console.log('IntersectionObserver polyfill injected.');
         });
-      },
-      this.props.rootMargin
-    );
-  };
+      }
 
-  handleRef = ref => {
-    if (ref) {
-      this.ref = ref;
+      if (typeof window !== 'undefined' && window.IntersectionObserver) {
+        isVisible = false;
+        hasBeenVisible = false;
+        IOSupported = true;
+      }
+
+      setHasBeenVisible(hasBeenVisible);
+      setIOSupported(IOSupported);
+      setIsVisible(isVisible);
+
+      listenToIntersections();
     }
-  };
+    initIO();
 
-  componentWillUnmount() {
-    this.io.disconnect();
-  }
+    return () => io.disconnect();
+  }, []);
 
-  render() {
-    const { isVisible, hasBeenVisible } = this.state;
-
-    return (
-      <div ref={this.handleRef}>
-        {this.props.children({ isVisible, hasBeenVisible })}
-      </div>
-    );
-  }
+  return [isVisible, hasBeenVisible];
 }
-
-IO.propTypes = {
-  children: PropTypes.func.isRequired,
-  rootMargin: PropTypes.string,
-};

@@ -29,4 +29,4 @@ Skills.propTypes = {
   skills: PropTypes.array,
 };
 
-export default Skills;
+export default React.memo(Skills);

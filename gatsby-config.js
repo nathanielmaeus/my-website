@@ -5,6 +5,7 @@ module.exports = {
     ...siteConfig,
   },
   plugins: [
+    'gatsby-plugin-typescript',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {

@@ -19,11 +19,11 @@
     },
     {
       "title": "FRAMEWORKS",
-      "tools": "react/redux svelte vue 3(a little)"
+      "tools": "react/redux svelte vue 3(basic)"
     },
     {
       "title": "TOOLS",
-      "tools": "redux-thunk redux-saga effector react-router"
+      "tools": "redux-thunk redux-saga react-router reselect"
     },
     {
       "title": "BUNDLE",

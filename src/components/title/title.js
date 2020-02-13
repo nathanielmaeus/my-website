@@ -18,4 +18,4 @@ Title.propTypes = {
   desc: PropTypes.string.isRequired,
 };
 
-export default Title;
+export default React.memo(Title);

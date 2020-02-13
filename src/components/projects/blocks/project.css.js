@@ -3,6 +3,7 @@ import MEDIA from 'helpers/mediaTemplates';
 
 export const Container = styled.div`
   display: flex;
+  position: relative;
   margin: 2rem 0;
   flex-direction: ${({ direction }) => direction};
 
@@ -17,16 +18,14 @@ export const Title = styled.a`
 `;
 
 export const Content = styled.div`
-  width: 30%;
+  width: 40%;
   margin-top: 1rem;
   ${MEDIA.TABLET`
     width:100%;
   `}
 `;
 
-export const Desc = styled.div`
-  padding: 0px 4px;
-`;
+export const Desc = styled.div``;
 
 export const Tags = styled.div`
   display: flex;
@@ -40,12 +39,10 @@ export const Tag = styled.div`
   border: ${({ theme }) => `1px solid ${theme === 'light' ? '#000' : '#fff'}`};
 `;
 
-export const ImgWrapper = styled.a`
-  width: 70%;
-  margin: 0 4rem;
-
-  cursor: pointer;
-  border: none;
+export const Wrapper = styled.div`
+  width: 60%;
+  margin-left: ${({ direction }) => (direction === 'row' ? '0' : '4rem')};
+  margin-right: ${({ direction }) => (direction === 'row' ? '4rem' : '0')};
 
   &:hover {
     border: none;

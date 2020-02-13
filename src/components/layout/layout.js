@@ -43,4 +43,4 @@ LayoutWithQuery.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default LayoutWithQuery;
+export default React.memo(LayoutWithQuery);
