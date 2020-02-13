@@ -29,6 +29,19 @@ const Slider: React.FC<ISliderProps> = ({ images, isVisible }) => {
     }
   });
   
+  const changePosition = React.useCallback(
+    (time = MAX_PROCENT) => {
+      if (position === images.length - 1) {
+        setProgressList([0, 0, 0]);
+        setPosition(0);
+      } else {
+        setPosition(e => e + 1);
+        setProgressList(e => [...e.slice(0, position), Math.round(time), ...e.slice(position + 1)]);
+      }
+    },
+    [position, images],
+  );
+  
   React.useEffect(() => {
     if (Math.round(time) === MAX_PROCENT && !around.current) {
       changePosition(time);
@@ -59,19 +72,6 @@ const Slider: React.FC<ISliderProps> = ({ images, isVisible }) => {
   React.useEffect(() => {
     setVisible(isVisible);
   }, [isVisible]);
-
-  const changePosition = React.useCallback(
-    (time = MAX_PROCENT) => {
-      if (position === images.length - 1) {
-        setProgressList([0, 0, 0]);
-        setPosition(0);
-      } else {
-        setPosition(e => e + 1);
-        setProgressList(e => [...e.slice(0, position), Math.round(time), ...e.slice(position + 1)]);
-      }
-    },
-    [position, images],
-  );
 
   const handleClick = (): void => {
     changePosition();
