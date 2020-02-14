@@ -36,7 +36,11 @@ function Project({ idx, item: { images, title, desc, tags = [], href } }) {
         <Container direction={direction}>
           <Wrapper direction={direction}>
             <div ref={divRef}>
-              <Slider images={componentImages} isVisible={isVisible} />
+              <Slider
+                images={componentImages}
+                isVisible={isVisible}
+                theme={theme}
+              />
             </div>
           </Wrapper>
 

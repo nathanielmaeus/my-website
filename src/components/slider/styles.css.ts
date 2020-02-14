@@ -13,14 +13,16 @@ export const Wrapper = styled.div`
   max-height: 500px;
   overflow: hidden;
   border-radius: 10px;
-  background: #eee;
+  background: ${({ theme }) =>
+    `${theme === 'light' ? '#fff' : '#212121'}`};
   cursor: pointer;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
 `;
 
 export const Cover = styled.div`
   position: relative;
   height: 100%;
-  width: ${({ width }: Props) => `${width}px`};
+  width: ${({ width }: Props) => `${width+1}px`};
   order: ${({ order }: Props) => `${order}`};
 `;
 

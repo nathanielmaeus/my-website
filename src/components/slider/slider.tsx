@@ -9,6 +9,7 @@ const DEFAULT_WIDTH = 919;
 export interface ISliderProps {
   images: string[];
   isVisible: boolean;
+  theme: string;
 }
 
 const Slider: React.FC<ISliderProps> = ({ images, isVisible }) => {
@@ -25,7 +26,7 @@ const Slider: React.FC<ISliderProps> = ({ images, isVisible }) => {
 
   useAnimationFrame(() => {
     if(visible) {
-      setTime(prevCount => (prevCount + 60 * 0.01) % MAX_PROCENT);
+     setTime(prevCount => (prevCount + 60 * 0.01) % MAX_PROCENT);
     }
   });
   

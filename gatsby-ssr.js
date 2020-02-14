@@ -12,11 +12,9 @@ export const replaceRenderer = ({
   const ConnectedBody = () => <AppProvider>{bodyComponent}</AppProvider>;
   replaceBodyHTMLString(renderToString(<ConnectedBody />));
 
-  // Add styled-components in SSR/build
   const sheet = new ServerStyleSheet();
   const styleElement = sheet.getStyleElement();
   setHeadComponents(styleElement);
 };
 
-// Page Transitions
 export const wrapPageElement = wrapPageElementWithTransition;

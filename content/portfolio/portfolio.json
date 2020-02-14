@@ -37,7 +37,7 @@
     {
       "title": "Telegram chart",
       "desc": "Pure canvas charts for telegram contest",
-      "images": ["../images/tg_1.jpg", "../images/tg_2.jpg", "../images/Screenshot_5.jpg"],
+      "images": [ "../images/tg_2.jpg", "../images/tg_2.jpg"],
 
       "tags": [
         "svelte"
