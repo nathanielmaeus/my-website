@@ -2,20 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 
+import Main from 'components/main';
 import Layout from 'components/layout';
 import Head from 'components/head';
 import Contacts from '../components/contacts';
 
 import styled from 'styled-components';
 import MEDIA from 'helpers/mediaTemplates';
-
-const Main = styled.div`
-  margin: 0 4rem;
-
-  ${MEDIA.TABLET`
-    margin: 0 1rem 1rem;  
-  `};
-`;
 
 const Container = styled.div`
   display: flex;

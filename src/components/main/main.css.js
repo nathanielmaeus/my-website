@@ -5,10 +5,15 @@ export const Container = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
 
-  margin: 0 1rem;
+  @media screen and (max-width: 1200px) {
+    margin: 0 1rem;
+  }
 
   ${MEDIA.TABLET`
     height: 100%;
+    margin: 0 1rem;
   `};
 `;

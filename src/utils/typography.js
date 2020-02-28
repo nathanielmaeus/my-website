@@ -4,14 +4,14 @@ const typography = new Typography({
   baseFontSize: '18px',
   baseLineHeight: 1.666,
   headerFontFamily: [
-    'Poppins',
+    'Nunito Sans',
     'Helvetica Neue',
     'Segoe UI',
     'Helvetica',
     'Arial',
     'sans-serif',
   ],
-  bodyFontFamily: ['monospace', 'serif'],
+  bodyFontFamily: ['Spartan', 'serif'],
   bodyColor: '#fff',
 });
 export default typography;

@@ -24,7 +24,6 @@ const Head = ({
       content="width=device-width,initial-scale=1.0,user-scalable=yes"
       name="viewport"
     />
-
     <meta content={siteTitle} name="apple-mobile-web-app-title" />
     <meta content={pageTitleFull} property="og:title" />
     <meta content={pageTitleFull} name="twitter:title" />
@@ -145,12 +144,30 @@ const Head = ({
       sizes="16x16"
       type="image/png"
     />
-
+    <link
+      href="https://fonts.googleapis.com/css?family=Spartan&display=swap"
+      rel="stylesheet"
+    ></link>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    ></link>
     <link
       href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
       rel="stylesheet"
     ></link>
-
+    <link
+      href="https://fonts.googleapis.com/css?family=Rubik&display=swap"
+      rel="stylesheet"
+    ></link>
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap"
+      rel="stylesheet"
+    ></link>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+      rel="stylesheet"
+    ></link>
     <script type="application/ld+json">
       {JSON.stringify(
         schemaGenerator({

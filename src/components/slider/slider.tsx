@@ -47,7 +47,6 @@ const Slider: React.FC<ISliderProps> = ({ images, isVisible }) => {
     if (Math.round(time) === MAX_PROCENT && !around.current) {
       changePosition(time);
       around.current = true;
-
       return;
     }
     if (Math.round(time) !== 100) {

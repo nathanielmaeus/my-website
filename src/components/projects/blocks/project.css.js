@@ -25,7 +25,10 @@ export const Content = styled.div`
   `}
 `;
 
-export const Desc = styled.div``;
+export const Desc = styled.div`
+  margin: 0.5rem 0;
+  font-size: 0.8rem;
+`;
 
 export const Tags = styled.div`
   display: flex;
@@ -33,8 +36,10 @@ export const Tags = styled.div`
 `;
 
 export const Tag = styled.div`
-  margin: 0 4px;
-  padding: 0px 4px;
+  &:not(:first-child) {
+    margin-left: 0.6rem;
+  }
+  padding: 0 0.4rem;
   font-size: 0.8rem;
   border: ${({ theme }) => `1px solid ${theme === 'light' ? '#000' : '#fff'}`};
 `;

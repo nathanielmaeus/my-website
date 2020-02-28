@@ -5,7 +5,7 @@ export const Container = styled.div`
   height: 50vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 
   ${MEDIA.TABLET`
@@ -16,21 +16,13 @@ export const Container = styled.div`
 
 export const Text = styled.span`
   display: block;
-  text-align: center;
-  font-weight: ${({ size }) => () => {
-    switch (size) {
-      case 'large':
-        return '500';
-      default:
-        return '400';
-    }
-  }};
+
   font-size: ${({ size }) => () => {
     switch (size) {
       case 'large':
-        return '3.5rem';
+        return '7.5rem';
       default:
-        return '1.3rem';
+        return '3.3rem';
     }
   }};
   line-height: 1.2;
@@ -39,20 +31,17 @@ export const Text = styled.span`
     font-size: ${({ size }) => () => {
       switch (size) {
         case 'large':
-          return '2rem';
+          return '5.5rem';
         default:
-          return '1.2rem';
+          return '2.2rem';
       }
     }};
   `};
 `;
 
 export const Subtitle = styled.h4`
-  text-align: center;
-  font-family: Poppins;
   font-weight: 100;
-  font-size: 2rem;
-  color: #707070;
+  font-size: 2.2rem;
 
   ${MEDIA.TABLET`
     margin: 1rem 0;
