@@ -16,7 +16,7 @@ export const Container = styled.div`
 
 export const Text = styled.span`
   display: block;
-
+  margin-bottom: 0rem;
   font-size: ${({ size }) => () => {
     switch (size) {
       case 'large':
@@ -31,7 +31,7 @@ export const Text = styled.span`
     font-size: ${({ size }) => () => {
       switch (size) {
         case 'large':
-          return '5.5rem';
+          return '4.5rem';
         default:
           return '2.2rem';
       }
@@ -40,11 +40,11 @@ export const Text = styled.span`
 `;
 
 export const Subtitle = styled.h4`
-  font-weight: 100;
   font-size: 2.2rem;
+  color: #4d4d4d;
 
   ${MEDIA.TABLET`
-    margin: 1rem 0;
+    margin: 0.4rem 0.2rem;
     font-size: 1.2rem;
   `};
 `;

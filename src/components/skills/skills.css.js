@@ -33,7 +33,7 @@ export const Column = styled.div`
 
   ${MEDIA.TABLET`
     max-width: ${({ letter }) => () => {
-      if (letter === 'spacing') return '85px';
+      if (letter === 'spacing') return '95px';
     }};
   `};
 `;
@@ -41,4 +41,12 @@ export const Column = styled.div`
 export const Highlight = styled.span`
   background: #dbf32c;
   color: #000;
+  font-size: 0.8rem;
+  padding: 3px 0;
+
+  ${MEDIA.TABLET`
+    font-size: 0.9rem;
+  `};
 `;
+
+export const Tools = styled(Column)``;
