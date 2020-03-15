@@ -13,10 +13,11 @@ export const Container = styled.header`
 `;
 
 export const Logo = styled.span`
-  background: #dbf32c;
   padding: 3px 0;
 
   a {
+    background: #dbf32c;
+
     color: #000;
     border: none;
   }

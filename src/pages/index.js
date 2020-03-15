@@ -28,6 +28,8 @@ const Bottom = styled.div`
     justify-content: center;
     align-items: center;
     border-top: none;
+    left: -4px;
+    position: relative;
   `};
 `;
 

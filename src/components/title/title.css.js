@@ -10,7 +10,7 @@ export const Container = styled.div`
 
   ${MEDIA.TABLET`
     height: 20vh;
-    margin: 2rem 0;
+    margin: 3rem 0;
   `};
 `;
 
