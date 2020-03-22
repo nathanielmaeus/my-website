@@ -70,11 +70,6 @@ export const query = graphql`
     homeJson {
       title
       desc
-      content {
-        childMarkdownRemark {
-          html
-        }
-      }
       gallery {
         title
         image {

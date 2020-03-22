@@ -14,6 +14,6 @@ export const Container = styled.section`
 
   ${MEDIA.TABLET`
     height: 100%;
-    margin: 0 1rem;
+    margin: 0 1rem 1rem 1rem;
   `};
 `;

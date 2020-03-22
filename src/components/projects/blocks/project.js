@@ -16,7 +16,7 @@ import {
 
 function Project({ idx, item: { images, title, desc, tags = [], href } }) {
   const divRef = React.useRef();
-  const [isVisible] = useIntersectionObserver(divRef, '-30%');
+  const [isVisible] = useIntersectionObserver(divRef, '-35%');
 
   const direction = idx % 2 === 0 ? 'row' : 'row-reverse';
 
@@ -48,7 +48,7 @@ function Project({ idx, item: { images, title, desc, tags = [], href } }) {
             <Title href={href} target="_blink">
               {title}
             </Title>
-            <Desc> {desc}</Desc>
+            <Desc>{desc}</Desc>
             <Tags>
               {tags.map(tag => {
                 return (
