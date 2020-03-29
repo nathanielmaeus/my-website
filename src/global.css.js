@@ -24,7 +24,7 @@ export default createGlobalStyle`
 
   h2 {
     margin: 2rem 0 1rem;
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   html {

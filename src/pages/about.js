@@ -5,34 +5,38 @@ import { graphql } from 'gatsby';
 import Main from 'components/main';
 import Layout from 'components/layout';
 import Head from 'components/head';
-import Contacts from '../components/contacts';
+
+import { Consumer } from 'store/createContext';
 
 import styled from 'styled-components';
-import MEDIA from 'helpers/mediaTemplates';
+import Chapters from 'components/chapters';
 
 const Container = styled.div`
   display: flex;
-
-  ${MEDIA.TABLET`
-    flex-direction: column-reverse;
-  `};
+  flex-direction: column;
+  margin: 0 1rem;
 `;
 
-const About = ({ data: { aboutJson } }) => (
-  <Layout>
-    <Main>
-      <Head pageTitle={aboutJson.title} />
-      <Container>
-        <section
-          dangerouslySetInnerHTML={{
-            __html: aboutJson.content.childMarkdownRemark.html,
-          }}
-        ></section>
-        <Contacts contacts={aboutJson.contacts} />
-      </Container>
-    </Main>
-  </Layout>
-);
+const About = ({ data: { aboutJson } }) => {
+  return (
+    <Consumer>
+      {({ theme }) => (
+        <Layout>
+          <Main>
+            <Head pageTitle={aboutJson.title} />
+            <Container>
+              <Chapters
+                contacts={aboutJson.contacts}
+                chapters={aboutJson.chapters}
+                theme={theme}
+              />
+            </Container>
+          </Main>
+        </Layout>
+      )}
+    </Consumer>
+  );
+};
 
 About.propTypes = {
   data: PropTypes.object.isRequired,
@@ -49,10 +53,13 @@ export const query = graphql`
         name
         type
       }
-      content {
-        childMarkdownRemark {
-          html
+      chapters {
+        source {
+          childMarkdownRemark {
+            html
+          }
         }
+        image
       }
     }
   }

@@ -1,6 +1,18 @@
 {
   "title": "About",
-  "content": "content.md",
+  "chapters": [
+    {
+      "source": "main.md"
+    },
+    {
+      "source": "aboutMe.md",
+      "image": "coffee"
+    },
+    {
+      "source": "currentWork.md",
+      "image": "messy"
+    }
+  ],
   "contacts": [
     {
       "type": "telegram",
